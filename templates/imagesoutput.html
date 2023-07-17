@@ -1,0 +1,45 @@
+{% extends "index.html"%}
+
+{% block content %}
+
+
+<div class="container">
+    <table class="table table-bordered border border-3 border-black">
+        <tbody>
+            {% if message != '' %}
+            <h4>{{message}}</h4>
+            <a href="/oldkeywordfun"><h4>search instead for {{oldkeyword}}</h4></a>
+            {% endif %}
+            
+            
+
+            {% for item in imagelist %}
+
+            <tr>
+                {% if item is mapping %}
+                {% for i in item %}
+                {% for j in item[i] %}
+
+                <th>
+                    <h3>pdf name :- {{i}} page:- {{j}}</h3>
+                    <img class="border border-3 border-dark-subtle" src="/static/images/{{i[:-4]}}/{{j}}"
+                        alt="Girl in a jacket">
+                </th>
+                {% endfor %}
+                {% endfor %}
+
+                {% else %}
+                <th>
+                    <h3>image name:- {{item}}</h3>
+                    <img class="border border-3 border-dark-subtle" src="/static/images/{{item}}"
+                        alt="Girl in a jacket">
+                </th>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+h1{
+    color:#000000 ;
+}
+p{
+    color:#000000;
+}
+.image-area {
+    border: 2px dashed rgba(0, 0, 0, 0.7);
+    padding: 3rem;
+    margin: 0rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Image Preview';
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
+
+body {
+    min-height: 100vh;
+    background-color:  rgb(252, 252, 252)
+}
+
+.btn-primary{
+    background-color:  #48aff9 !important;
+    border-color: #48aff9 !important;
+    width: 100%;
+    padding-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
